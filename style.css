@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    font-family:montserrat;
+    background:rgb(116, 88, 70);
+}
+.container{
+    background:rgb(238, 238, 238);
+    width:600px;
+    height:400px;
+    margin:100px auto;
+    display:flex;
+    position:relative;
+}
+h1,h2,h3,h4{
+    font-weight:400;
+}
+.box{
+    width:50%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.current{
+    background:none;
+    border:1px solid green;
+    width:140px;
+    height:100px;
+    text-align:center;
+    color:white
+}
+.current h2,
+.current h3{
+    color:rgb(72, 72, 72);
+}
+#new-game{
+    position:absolute;
+    padding: .5rem 1rem;
+    top:2rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+    border-radius:20px;
+    background:rgb(245, 166, 106);
+    cursor:pointer;
+    color:white;
+}
+
+#roll, #hold{
+    position:absolute;
+    padding:.6rem 1rem;
+    bottom:1rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+    border-radius:20px;
+    background:rgb(82, 164, 82);
+    cursor:pointer;
+    color:white;
+}
+#roll{
+    bottom:5rem
+}
+.latest-dice{
+    position:absolute;
+    top:7rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+    width:100px;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#dice-img{
+    width:100%;
+}
+.active{
+    background:rgba(255, 215, 116, 0.5);
+}
+.box h1{
+    color:green;
+    font-size:3em;
+}
+.pl{
+    padding:10px;
+    border-radius: 10px;
+}
+.active .pl{
+    background:rgb(255, 255, 144);
+    color:rgb(223, 129, 112);
+}
+.active .pl:before{
+    content:"ACTIVE ";
+    color:white;
+    font-size:.7rem;
+    background: green;
+    padding:3px;
+    margin-right:5px;
+    position:relative;
+    bottom:5px;
+}
